@@ -1,5 +1,8 @@
 # 🎓 Hackerrank:Python Program to Find Students with the Second Lowest Grade
-
+NAME : G SANJAY
+---
+REG NO : 212224230243
+---
 This program reads student names and their corresponding grades, identifies the **second lowest grade**, and prints the names of all students who have that grade in **alphabetical order**.
 
 ---
@@ -26,11 +29,24 @@ To write a Python program to:
 ---
 
 ## 💻  Program
-
+~~~
+N=int(input())
+records=[]
+for _ in range(N):
+    name=input()
+    grade=float(input())
+    records.append([name,grade])
+grades=sorted(set([grade for name,grade in records]))
+second_lowest_grade=grades[1]
+students_with_second_lowest=[name for name,grade in records if grade==second_lowest_grade]
+students_with_second_lowest.sort()
+for student in students_with_second_lowest:
+    print(student)
+~~~
 Add Code Here
 
 ## Output
+![image](https://github.com/user-attachments/assets/3b7e9239-c8a8-4a69-8df7-687ee2dc401e)
 
 ## Result
-
-
+Thus, the program has been execueted successfully.
